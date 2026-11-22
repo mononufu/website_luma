@@ -158,13 +158,13 @@ p { margin: 0; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 .phone {
-  position: relative; width: min(280px, 62vw); aspect-ratio: 589 / 1374;
-  border-radius: 46px; padding: 9px;
+  position: relative; width: min(280px, 62vw); aspect-ratio: 589 / 1278;
+  border-radius: 30px; padding: 9px;
   background: rgba(255, 246, 239, .08); border: 1px solid var(--glass-line);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 50px 120px -40px rgba(0, 0, 0, .7);
 }
-.phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 38px; }
+.phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 22px; }
 
 .scroll-hint { margin-top: 64px; display: inline-flex; flex-direction: column; align-items: center; gap: 12px; text-decoration: none; }
 .scroll-hint i { width: 1px; height: 56px; background: linear-gradient(var(--ink-faint), transparent); animation: hint 2.4s ease-in-out infinite; transform-origin: top; }
@@ -227,8 +227,8 @@ section { scroll-margin-top: 100px; }
 .marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
 .marquee-track { display: flex; gap: 32px; width: max-content; animation: marquee 60s linear infinite; padding: 10px 0 40px; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee .phone { width: 230px; flex: none; border-radius: 38px; padding: 7px; }
-.marquee .phone img { border-radius: 31px; }
+.marquee .phone { width: 230px; flex: none; border-radius: 26px; padding: 7px; }
+.marquee .phone img { border-radius: 20px; }
 .marquee .phone:nth-child(even) { transform: translateY(40px); }
 @keyframes marquee { to { transform: translateX(calc(-50% - 16px)); } }
 
@@ -349,3 +349,4 @@ h1 .sans { font-family: var(--sans); font-weight: 500; font-size: .8em; letter-s
   border-top: 1px solid var(--glass-line);
 }
 .site-footer > .wrap:first-child { padding-top: 48px; border-top: 1px solid var(--glass-line); }
+.phone.stack img { border-radius: 22px; }
