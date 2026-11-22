@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="512" height="512">
+  <title>Luma</title>
+  <defs>
+    <linearGradient id="luma-violet" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B73FF"/>
+      <stop offset="1" stop-color="#5B3FE0"/>
+    </linearGradient>
+  </defs>
+  <rect width="108" height="108" fill="url(#luma-violet)"/>
+  <circle cx="54" cy="54" r="8.5" fill="#FFFFFF"/>
+  <path d="M54 35 A19 19 0 1 1 35 54" fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round"/>
+</svg>
