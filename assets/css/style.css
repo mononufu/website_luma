@@ -158,7 +158,7 @@ p { margin: 0; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 .phone {
-  position: relative; width: min(280px, 62vw); aspect-ratio: 589 / 1278;
+  position: relative; width: min(280px, 62vw); aspect-ratio: 589 / 1374;
   border-radius: 46px; padding: 9px;
   background: rgba(255, 246, 239, .08); border: 1px solid var(--glass-line);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
