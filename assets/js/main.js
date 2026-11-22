@@ -33,4 +33,17 @@
   document.querySelectorAll("[data-mood]").forEach(function (el) {
     if (el !== root) moods.observe(el);
   });
+
+  // Étapes des interventions : l'étape au centre de l'écran change l'image du téléphone.
+  var shots = document.querySelectorAll(".phone.stack img");
+  var steps = document.querySelectorAll(".step");
+  var stepIo = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var n = Number(e.target.getAttribute("data-step"));
+      steps.forEach(function (s) { s.classList.toggle("active", s === e.target); });
+      shots.forEach(function (img, i) { img.classList.toggle("on", i === n); });
+    });
+  }, { rootMargin: "-45% 0px -45% 0px" });
+  steps.forEach(function (s) { stepIo.observe(s); });
 })();

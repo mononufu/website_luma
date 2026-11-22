@@ -44,7 +44,7 @@
     <section class="hero" id="top" data-mood="copper">
       <div class="wrap">
         <p class="label reveal"><span class="dot" aria-hidden="true"></span>Application Android · 100 % locale</p>
-        <h1 class="reveal">Le temps qu’il te reste, <em>c’est toi</em> qui le décides.</h1>
+        <h1 class="reveal"><span class="sans">Le temps</span> <span class="pill"><img src="assets/img/pill-temps.webp" alt="" width="290" height="130"></span> <span class="sans">qu’il te reste,</span> <em>c’est toi</em> <span class="pill round"><img src="assets/img/pill-pause.webp" alt="" width="200" height="200"></span> qui le décides.</h1>
         <p class="lead reveal">Luma mesure ton vrai temps d’écran et t’aide à le reprendre en main, avec douceur ou avec fermeté.</p>
         <div class="hero-ctas reveal">
           <a class="btn btn-primary" href="#telecharger">Être prévenu de la sortie</a>
@@ -58,6 +58,9 @@
             <g class="spin"><circle class="dot" cx="300" cy="30" r="6"/></g>
           </svg>
           <div class="phone"><img src="assets/img/aura-accueil-fr.webp" alt="Accueil de Luma en style Aura : 1 h 42 de temps d’écran aujourd’hui, 1 h 18 encore disponibles" width="589" height="1278" fetchpriority="high"></div>
+          <div class="float glass f1" aria-hidden="true"><span class="label">Objectif</span><b>3 h par jour</b></div>
+          <div class="float glass f2" aria-hidden="true"><span class="label">Série</span><b>12 jours</b></div>
+          <div class="float glass f3" aria-hidden="true"><span class="label">Instagram</span><b>En pause · 9 s</b></div>
         </div>
       </div>
     </section>
@@ -69,21 +72,27 @@
       </div>
     </section>
 
-    <!-- Interventions -->
-    <section class="section" id="interventions" data-mood="grey">
-      <div class="wrap split">
-        <div class="section-intro reveal">
+    <!-- Interventions : le téléphone reste fixe pendant que les étapes défilent -->
+    <section class="section" id="interventions" data-mood="grey" style="padding-bottom:40px">
+      <div class="wrap">
+        <div class="section-intro reveal" style="max-width:720px">
           <p class="label">Trois façons d’intervenir</p>
           <h2>Une limite qui tient, <em>sans punir</em>.</h2>
           <p class="lead">Crée une règle pour les apps qui posent problème, puis choisis comment Luma réagit.</p>
-          <ol class="modes">
-            <li><span class="num">01</span><h3>Un rappel.</h3><p>Une notification, sans rien bloquer.</p></li>
-            <li><span class="num">02</span><h3>Une pause.</h3><p>Quelques secondes pour respirer, puis un bouton « Continuer » qui ouvre l’app pour 5 minutes.</p></li>
-            <li><span class="num">03</span><h3>Un blocage.</h3><p>L’app reste fermée tant que la règle s’applique. Trois exceptions par jour, pour souffler.</p></li>
-          </ol>
         </div>
-        <div class="reveal">
-          <div class="phone"><img src="assets/img/pause-friction-aura.webp" alt="Page de pause : « Une pause avant de continuer. Bois un verre d’eau, puis décide. » avec un compte à rebours" width="589" height="1278" loading="lazy"></div>
+        <div class="sticky-split">
+          <ol class="steps-list">
+            <li class="step" data-step="0"><span class="num">01</span><h3>Un rappel.</h3><p>Une notification quand tu approches de ta limite. Rien n’est bloqué, tu gardes simplement un œil sur ton temps.</p></li>
+            <li class="step" data-step="1"><span class="num">02</span><h3>Une pause.</h3><p>Quelques secondes pour respirer, puis un bouton « Continuer » qui ouvre l’app pour 5 minutes. Le temps de se demander si on en a vraiment envie.</p></li>
+            <li class="step" data-step="2"><span class="num">03</span><h3>Un blocage.</h3><p>L’app reste fermée tant que la règle s’applique. Trois exceptions par jour, pour souffler quand il le faut.</p></li>
+          </ol>
+          <div class="sticky-phone">
+            <div class="phone stack">
+              <img class="on" src="assets/img/accueil-aura-barre.webp" alt="Accueil : le temps restant sur l’objectif du jour" width="589" height="1278" loading="lazy">
+              <img src="assets/img/pause-friction-aura.webp" alt="Page de pause avec un compte à rebours de 9 secondes" width="589" height="1278" loading="lazy">
+              <img src="assets/img/pause-blocage-aura.webp" alt="Page de blocage : Instagram est en pause" width="589" height="1278" loading="lazy">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -126,14 +135,12 @@
         <div class="marquee-track">
           <div class="phone"><img src="assets/img/accueil-aura-barre.webp" alt="Accueil" width="589" height="1278" loading="lazy"></div>
           <div class="phone"><img src="assets/img/aura-profil-fr.webp" alt="Profil" width="589" height="1278" loading="lazy"></div>
-          <div class="phone"><img src="assets/img/pause-blocage-aura.webp" alt="Page de blocage" width="589" height="1278" loading="lazy"></div>
           <div class="phone"><img src="assets/img/aura-personnaliser-fr.webp" alt="Personnaliser l’accueil" width="589" height="1278" loading="lazy"></div>
           <div class="phone"><img src="assets/img/aura-parametres-fr.webp" alt="Paramètres" width="589" height="1278" loading="lazy"></div>
           <div class="phone"><img src="assets/img/aura-apparence-fr.webp" alt="Apparence" width="589" height="1278" loading="lazy"></div>
           <!-- Copie pour une boucle continue -->
           <div class="phone" aria-hidden="true"><img src="assets/img/accueil-aura-barre.webp" alt="" width="589" height="1278" loading="lazy"></div>
           <div class="phone" aria-hidden="true"><img src="assets/img/aura-profil-fr.webp" alt="" width="589" height="1278" loading="lazy"></div>
-          <div class="phone" aria-hidden="true"><img src="assets/img/pause-blocage-aura.webp" alt="" width="589" height="1278" loading="lazy"></div>
           <div class="phone" aria-hidden="true"><img src="assets/img/aura-personnaliser-fr.webp" alt="" width="589" height="1278" loading="lazy"></div>
           <div class="phone" aria-hidden="true"><img src="assets/img/aura-parametres-fr.webp" alt="" width="589" height="1278" loading="lazy"></div>
           <div class="phone" aria-hidden="true"><img src="assets/img/aura-apparence-fr.webp" alt="" width="589" height="1278" loading="lazy"></div>
@@ -200,6 +207,7 @@
   </main>
 
   <footer class="site-footer">
+    <div class="wordmark" aria-hidden="true">Luma</div>
     <div class="wrap footer-grid">
       <div>
         <a class="brand" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="4.5" fill="currentColor"/><path d="M24 10 A14 14 0 1 1 10 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg>Luma</a>
