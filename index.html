@@ -1,361 +1,199 @@
 <!doctype html>
-<html lang="fr" class="no-js">
+<html lang="fr" class="no-js" data-mood="copper">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Luma · Reprends la main sur ton temps d’écran</title>
-  <meta name="description" content="Luma est une application Android qui mesure ton vrai temps d’écran et met des règles douces ou strictes sur les apps qui te prennent trop de temps. Sans compte, sans serveur, 100 % local.">
-  <meta name="theme-color" content="#0a0b0d">
+  <title>Luma · Le temps qu’il te reste, c’est toi qui le décides</title>
+  <meta name="description" content="Luma est une application Android qui mesure ton vrai temps d’écran et intervient au bon moment : un rappel, une pause ou un blocage. Sans compte, sans serveur, 100 % local.">
+  <meta name="theme-color" content="#1a1210">
   <link rel="icon" href="assets/img/luma-logo.svg" type="image/svg+xml">
   <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Luma · Reprends la main sur ton temps d’écran">
-  <meta property="og:description" content="Temps d’écran réel, règles, Focus. Sans compte ni serveur : tout reste sur ton téléphone.">
+  <meta property="og:title" content="Luma · Le temps qu’il te reste, c’est toi qui le décides">
+  <meta property="og:description" content="Temps d’écran réel, règles douces ou strictes, Focus. Sans compte ni serveur : tout reste sur ton téléphone.">
   <meta property="og:image" content="assets/img/og-image.jpg">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" href="assets/fonts/inter.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.remove("no-js")</script>
 </head>
 <body>
+  <div class="atmos" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
   <a class="skip" href="#contenu">Aller au contenu</a>
 
   <header class="site-header">
     <nav class="wrap nav" aria-label="Navigation principale">
       <a class="brand" href="#top" aria-label="Luma, retour en haut">
-        <img src="assets/img/luma-logo.svg" alt="" width="30" height="30">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="4.5" fill="currentColor"/><path d="M24 10 A14 14 0 1 1 10 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg>
         Luma
       </a>
       <ul class="nav-links">
-        <li><a href="#fonctionnalites">Fonctionnalités</a></li>
-        <li><a href="#regles">Règles</a></li>
-        <li><a href="#styles">Styles</a></li>
+        <li><a href="#interventions">L’app</a></li>
         <li><a href="#confidentialite">Confidentialité</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#faq">Questions</a></li>
       </ul>
-      <a class="btn btn-primary" href="#telecharger">Bientôt sur Play</a>
+      <a class="btn btn-glass" href="#telecharger">Bientôt sur Play</a>
     </nav>
   </header>
 
   <main id="contenu">
     <!-- Héros -->
-    <section class="hero" id="top">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="label"><span class="dot" aria-hidden="true"></span>Application Android · 100 % locale</p>
-          <h1>Reprends la main sur ton <em>temps d’écran</em>.</h1>
-          <p class="lead">Luma mesure ton usage réel et met des règles douces ou strictes sur les applications qui te prennent trop de temps. Un rappel, une pause de quelques secondes ou un vrai blocage&nbsp;: c’est toi qui choisis.</p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#telecharger">Être prévenu de la sortie</a>
-            <a class="btn btn-ghost" href="#fonctionnalites">Découvrir l’app</a>
-          </div>
-          <p class="hero-note">Sans compte · sans serveur · sans pub · sans traceur</p>
-        </div>
-
-        <div class="phone-stage" aria-hidden="true">
-          <div class="phone back"><img src="assets/img/aura-accueil-fr.webp" alt="" width="589" height="1278"></div>
-          <div class="phone front"><img src="assets/img/accueil-fr-sombre.webp" alt="" width="589" height="1278" fetchpriority="high"></div>
-          <div class="float-card two">
-            <p class="label">Objectif</p>
-            <strong>1 h 18 <span class="accent" style="font-size:15px;font-weight:500">restantes</span></strong>
-          </div>
-          <div class="float-card one">
-            <p class="label">Batterie du jour</p>
-            <div class="segments"><i></i><i></i><i></i><i></i><i></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Chiffres -->
-    <div class="ticker">
-      <ul class="wrap">
-        <li><strong>0</strong><span class="label">compte à créer</span></li>
-        <li><strong>0</strong><span class="label">donnée envoyée</span></li>
-        <li><strong>3</strong><span class="label">niveaux d’intervention</span></li>
-        <li><strong>2,4 Mo</strong><span class="label">pour l’app entière</span></li>
-        <li><strong>7.0+</strong><span class="label">versions d’Android</span></li>
-      </ul>
-    </div>
-
-    <!-- Fonctionnalités -->
-    <section class="section" id="fonctionnalites">
+    <section class="hero" id="top" data-mood="copper">
       <div class="wrap">
-        <div class="section-head reveal">
-          <p class="label">01 · Accueil</p>
-          <h2>Des chiffres qui servent à quelque chose.</h2>
-          <p>La plupart des apps de bien-être numérique affichent des statistiques, puis s’arrêtent là. Luma te montre où tu en es, puis t’aide à agir au bon moment.</p>
+        <p class="label reveal"><span class="dot" aria-hidden="true"></span>Application Android · 100 % locale</p>
+        <h1 class="reveal">Le temps qu’il te reste, <em>c’est toi</em> qui le décides.</h1>
+        <p class="lead reveal">Luma mesure ton vrai temps d’écran et t’aide à le reprendre en main, avec douceur ou avec fermeté.</p>
+        <div class="hero-ctas reveal">
+          <a class="btn btn-primary" href="#telecharger">Être prévenu de la sortie</a>
+          <a class="link" href="#interventions">Découvrir l’app</a>
         </div>
 
-        <div class="bento">
-          <article class="card span-4 split reveal">
-            <div>
-              <p class="label"><span class="dot" aria-hidden="true"></span>Temps d’écran · en direct</p>
-              <p class="big-num">1 h 42</p>
-              <p class="accent" style="margin-top:10px">1 h 18 encore disponibles</p>
-              <div class="ruler" aria-hidden="true">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="cursor"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i>
-              </div>
-              <h3>Ton vrai temps d’écran</h3>
-              <p>Calculé à partir des données d’Android, comparé à ta moyenne sur 7 jours à la même heure. Avec les apps les plus utilisées et le détail par jour.</p>
-            </div>
-            <img class="shot" src="assets/img/accueil-fr-clair.webp" alt="Accueil de Luma en thème clair : temps d’écran, batterie et Focus" width="589" height="1278" loading="lazy">
-          </article>
-
-          <article class="card span-2 voltcard reveal">
-            <p class="label">Batterie</p>
-            <p class="big-num">43<small> %</small></p>
-            <p style="margin-top:6px">restant sur 3 h</p>
-            <div class="segments" aria-hidden="true" style="margin-top:18px"><i style="background:#0c0d10"></i><i style="background:#0c0d10"></i><i style="background:#0c0d10"></i><i style="background:#0c0d10"></i><i style="background:rgba(12,13,16,.18)"></i><i style="background:rgba(12,13,16,.18)"></i><i style="background:rgba(12,13,16,.18)"></i></div>
-            <h3>Un objectif quotidien</h3>
-            <p>Ce qu’il te reste pour la journée, et une série de jours réussis symbolisée par une flamme.</p>
-          </article>
-
-          <article class="card span-2 violet reveal" id="focus">
-            <p class="label">Focus</p>
-            <h3>Quatre profils prêts à l’emploi</h3>
-            <p>Travail, Étude, Sommeil et Personnel. Un mode strict qu’on ne peut pas arrêter avant la fin, même en changeant l’heure du téléphone.</p>
-            <div class="chips"><span class="chip">Tuile rapide</span><span class="chip">Widget</span><span class="chip">Raccourcis</span></div>
-            <div class="radar" aria-hidden="true"></div>
-          </article>
-
-          <article class="card span-4 split reveal">
-            <div>
-              <p class="label">Personnaliser l’accueil</p>
-              <h3>Ton tableau de bord, à ta façon</h3>
-              <p>Batterie, Focus, semaine, applications, objectif, tendance, série&nbsp;: affiche ou masque chaque widget, passe-le en demi ou pleine largeur, déplace-le en le maintenant. Un aperçu de la grille suit chaque changement.</p>
-              <div class="chips"><span class="chip">Bilan hebdo</span><span class="chip">Tendance 7 j</span><span class="chip">Série</span></div>
-            </div>
-            <img class="shot" src="assets/img/personnaliser-fr-sombre.webp" alt="Écran Personnaliser l’accueil avec l’aperçu de la grille de widgets" width="589" height="1278" loading="lazy">
-          </article>
-
-          <article class="card span-2 reveal">
-            <p class="label">Widget</p>
-            <h3>Sur ton écran d’accueil</h3>
-            <p>Temps restant, série et raccourci Focus, sans ouvrir l’app.</p>
-          </article>
-          <article class="card span-2 reveal">
-            <p class="label">Rappels</p>
-            <h3>Juste ce qu’il faut</h3>
-            <p>Un message le matin et une alerte quand l’objectif du jour est dépassé. Facultatifs, bien sûr.</p>
-          </article>
-          <article class="card span-2 reveal">
-            <p class="label">Reels Instagram</p>
-            <h3>Sortir du scroll infini</h3>
-            <p>Une option à part revient en arrière quand un écran Reels s’ouvre, sans bloquer le reste d’Instagram.</p>
-          </article>
+        <div class="dial-stage reveal">
+          <svg class="dial" viewBox="0 0 600 600" aria-hidden="true">
+            <circle class="ticks" cx="300" cy="300" r="292" fill="none" stroke-dasharray="1 14.3"/>
+            <path class="arc" d="M300 30 A270 270 0 1 1 30 300"/>
+            <g class="spin"><circle class="dot" cx="300" cy="30" r="6"/></g>
+          </svg>
+          <div class="phone"><img src="assets/img/aura-accueil-fr.webp" alt="Accueil de Luma en style Aura : 1 h 42 de temps d’écran aujourd’hui, 1 h 18 encore disponibles" width="589" height="1278" fetchpriority="high"></div>
         </div>
       </div>
     </section>
 
-    <!-- Règles -->
-    <section class="section" id="regles" style="padding-top:0">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="label">02 · Règles</p>
-          <h2>Des limites qui tiennent, <span class="accent">sans être punitives</span>.</h2>
-          <p>Crée une règle pour les apps qui posent problème, choisis quand elle s’applique et comment Luma intervient. Les apps essentielles (téléphone, messages, appareil photo, alarmes) ne sont jamais bloquées.</p>
-        </div>
-
-        <div class="rules-layout">
-          <article class="card reveal">
-            <p class="label">Déclencheurs</p>
-            <ul class="triggers" style="margin-top:14px">
-              <li><div><b>Plage horaire</b><span>Pas de réseaux sociaux la nuit</span></div><code>22:00 → 07:00</code></li>
-              <li><div><b>Temps d’écran quotidien</b><span>Partagé entre plusieurs apps vidéo</span></div><code>45 min / jour</code></li>
-              <li><div><b>Temps d’écran hebdomadaire</b><span>Pour les jeux</span></div><code>5 h / semaine</code></li>
-              <li><div><b>Ouvertures quotidiennes</b><span>Instagram</span></div><code>10 × / jour</code></li>
-            </ul>
-          </article>
-
-          <article class="card reveal">
-            <p class="label">Soirée sans réseaux · s’applique</p>
-            <h3>Une frise de 24 h sur chaque règle</h3>
-            <p>Tu vois d’un coup d’œil quand la règle s’applique, où tu en es dans ton quota, et les jours concernés.</p>
-            <div class="timeline" aria-hidden="true">
-              <span class="band" style="left:0;width:29.2%"></span>
-              <span class="band" style="left:91.6%;width:8.4%"></span>
-              <span class="now" style="left:93%"></span>
-            </div>
-            <div class="timeline-scale" aria-hidden="true"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
-            <div class="chips"><span class="chip">Nuit</span><span class="chip">Travail</span><span class="chip">Cours</span><span class="chip">Week-end</span></div>
-            <p style="margin-top:14px;font-size:14px;color:var(--muted)">Des modèles et des listes d’apps réutilisables accélèrent la création.</p>
-          </article>
-        </div>
-
-        <div class="actions">
-          <article class="action is-notif reveal">
-            <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
-            <h3>Notification</h3>
-            <p>Un simple rappel, sans rien bloquer. Pour garder un œil sans se contraindre.</p>
-          </article>
-          <article class="action is-friction reveal">
-            <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-            <h3>Friction</h3>
-            <p>Une courte pause, puis un bouton «&nbsp;Continuer&nbsp;» qui ouvre l’app pour 5 minutes. Le temps de se demander si on en a vraiment envie.</p>
-          </article>
-          <article class="action is-block reveal">
-            <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
-            <h3>Blocage</h3>
-            <p>L’application reste fermée tant que la règle s’applique. Trois exceptions temporaires par jour pour souffler.</p>
-          </article>
-        </div>
-
-        <article class="card reveal" style="margin-top:16px">
-          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:baseline">
-            <div>
-              <p class="label">Minuteurs</p>
-              <h3>Choisis à quel point c’est difficile de céder</h3>
-            </div>
-            <p style="max-width:30em;color:var(--muted);font-size:15px">En mode progressif, chaque attente double à chaque utilisation dans la journée, jusqu’à 10 min, puis revient à la base à minuit.</p>
-          </div>
-          <div class="table-scroll">
-            <table class="timers">
-              <thead><tr><th scope="col">Mode</th><th scope="col">Friction</th><th scope="col">Exception</th><th scope="col">Règle en cours</th></tr></thead>
-              <tbody>
-                <tr><td>Classique</td><td>5 s</td><td>10 s</td><td>sans attente</td></tr>
-                <tr><td>Fixe</td><td>15 s</td><td>30 s</td><td>30 s</td></tr>
-                <tr><td>Progressif</td><td class="volt">5 s → ×2</td><td class="volt">10 s → ×2</td><td class="volt">15 s → ×2</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
+    <!-- Manifeste -->
+    <section class="section statement" data-mood="copper">
+      <div class="wrap reveal">
+        <p>La plupart des apps affichent des statistiques, puis s’arrêtent là. <b>Luma intervient au bon moment</b>, sans compte, sans serveur, <b>sans rien te prendre</b>.</p>
       </div>
     </section>
 
-    <!-- Page de pause -->
-    <section class="section pause" id="pause" style="padding-top:40px">
-      <div class="wrap pause-grid">
-        <div class="pause-phones reveal">
-          <div class="phone"><img src="assets/img/pause-friction-aura.webp" alt="Page de pause Luma en style Aura : « Une pause avant de continuer », compte à rebours de 9 secondes" width="589" height="1278" loading="lazy"></div>
-          <div class="phone"><img src="assets/img/pause-friction-tech-sombre.webp" alt="Page de pause Luma en style Tech sombre avec l’anneau de compte à rebours" width="589" height="1278" loading="lazy"></div>
-        </div>
-        <div class="reveal">
-          <p class="label">03 · Le bon moment</p>
-          <h2 style="margin:16px 0 18px">Une pause avant de continuer.</h2>
-          <p class="lead">Quand tu ouvres une app limitée, Luma s’interpose avec une page calme&nbsp;: la règle en cause, une petite suggestion, et un anneau qui se vide pendant l’attente.</p>
-          <div class="countdown" aria-hidden="true">
-            <svg class="ring" viewBox="0 0 80 80"><circle class="track" cx="40" cy="40" r="35"/><circle class="bar" cx="40" cy="40" r="35"/></svg>
-            <div><p class="label">Pause temporaire</p><p style="font-size:20px;font-weight:600">Bois un verre d’eau, puis décide.</p></div>
-          </div>
-          <ol class="steps">
-            <li>Tu ouvres Instagram pendant ta «&nbsp;Soirée sans réseaux&nbsp;».</li>
-            <li>Luma affiche la pause, dans le style que tu as choisi.</li>
-            <li>Tu reviens à l’accueil… ou tu continues 5 minutes, en connaissance de cause.</li>
+    <!-- Interventions -->
+    <section class="section" id="interventions" data-mood="grey">
+      <div class="wrap split">
+        <div class="section-intro reveal">
+          <p class="label">Trois façons d’intervenir</p>
+          <h2>Une limite qui tient, <em>sans punir</em>.</h2>
+          <p class="lead">Crée une règle pour les apps qui posent problème, puis choisis comment Luma réagit.</p>
+          <ol class="modes">
+            <li><span class="num">01</span><h3>Un rappel.</h3><p>Une notification, sans rien bloquer.</p></li>
+            <li><span class="num">02</span><h3>Une pause.</h3><p>Quelques secondes pour respirer, puis un bouton « Continuer » qui ouvre l’app pour 5 minutes.</p></li>
+            <li><span class="num">03</span><h3>Un blocage.</h3><p>L’app reste fermée tant que la règle s’applique. Trois exceptions par jour, pour souffler.</p></li>
           </ol>
         </div>
+        <div class="reveal">
+          <div class="phone"><img src="assets/img/pause-friction-aura.webp" alt="Page de pause : « Une pause avant de continuer. Bois un verre d’eau, puis décide. » avec un compte à rebours" width="589" height="1278" loading="lazy"></div>
+        </div>
       </div>
     </section>
 
-    <!-- Styles -->
-    <section class="section" id="styles" style="padding-top:60px">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="label">04 · Deux styles</p>
-          <h2>Tech ou Aura, <span class="accent">comme tu le sens</span>.</h2>
-          <p><strong>Tech</strong>&nbsp;: un tableau de bord net, en clair ou en sombre, libellés monospace et vert «&nbsp;volt&nbsp;». <strong>Aura</strong>&nbsp;: des fonds flous et granuleux, du verre dépoli, une lumière différente pour chaque partie de l’app.</p>
+    <!-- Règles et Focus -->
+    <section class="section" data-mood="violet">
+      <div class="wrap split reverse">
+        <div class="reveal">
+          <p class="label">Règles &amp; Focus</p>
+          <h2>Des règles <em>à ton rythme</em>.</h2>
+          <div class="triggers">
+            <div class="trigger glass"><span class="label">Plage horaire</span><strong>22:00 → 07:00</strong></div>
+            <div class="trigger glass"><span class="label">Par jour</span><strong>45 min de vidéo</strong></div>
+            <div class="trigger glass"><span class="label">Par semaine</span><strong>5 h de jeux</strong></div>
+            <div class="trigger glass"><span class="label">Ouvertures</span><strong>10 × Instagram</strong></div>
+          </div>
+          <div class="focus-card glass">
+            <p class="label" style="color:rgba(255,255,255,.75)">Focus</p>
+            <h3>Faire une pause.</h3>
+            <p>Lance une session depuis l’accueil, la tuile rapide ou le widget. En mode strict, impossible de l’arrêter avant la fin.</p>
+            <div class="profiles"><span>Travail</span><span>Étude</span><span>Sommeil</span><span>Personnel</span></div>
+            <div class="radar" aria-hidden="true"></div>
+          </div>
+          <p class="note">Le téléphone, les messages, l’appareil photo et les alarmes ne sont jamais bloqués.</p>
         </div>
+        <div class="reveal">
+          <div class="phone"><img src="assets/img/aura-regles-fr.webp" alt="Liste des règles en style Aura : Soirée sans réseaux, de 20:00 à 23:00, avec sa frise de 24 heures" width="589" height="1278" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
 
-        <div class="styles-switch" role="tablist" aria-label="Choisir un style">
-          <button role="tab" id="tab-tech" aria-controls="panel-tech" aria-selected="true">Tech</button>
-          <button role="tab" id="tab-aura" aria-controls="panel-aura" aria-selected="false" tabindex="-1">Aura</button>
+    <!-- Galerie -->
+    <section class="section" style="padding-top:40px" data-mood="violet">
+      <div class="wrap gallery-head reveal">
+        <p class="label">Aura</p>
+        <h2>Une lumière pour chaque moment.</h2>
+        <p class="lead">Cuivre pour l’accueil, gris pour les règles, violet pour le Focus, bleu-vert pour le profil. Et si tu préfères un tableau de bord net, le style Tech est à un geste.</p>
+      </div>
+      <div class="marquee" aria-label="Captures de l’application">
+        <div class="marquee-track">
+          <div class="phone"><img src="assets/img/accueil-aura-barre.webp" alt="Accueil" width="589" height="1278" loading="lazy"></div>
+          <div class="phone"><img src="assets/img/aura-profil-fr.webp" alt="Profil" width="589" height="1278" loading="lazy"></div>
+          <div class="phone"><img src="assets/img/pause-blocage-aura.webp" alt="Page de blocage" width="589" height="1278" loading="lazy"></div>
+          <div class="phone"><img src="assets/img/aura-personnaliser-fr.webp" alt="Personnaliser l’accueil" width="589" height="1278" loading="lazy"></div>
+          <div class="phone"><img src="assets/img/aura-parametres-fr.webp" alt="Paramètres" width="589" height="1278" loading="lazy"></div>
+          <div class="phone"><img src="assets/img/aura-apparence-fr.webp" alt="Apparence" width="589" height="1278" loading="lazy"></div>
+          <!-- Copie pour une boucle continue -->
+          <div class="phone" aria-hidden="true"><img src="assets/img/accueil-aura-barre.webp" alt="" width="589" height="1278" loading="lazy"></div>
+          <div class="phone" aria-hidden="true"><img src="assets/img/aura-profil-fr.webp" alt="" width="589" height="1278" loading="lazy"></div>
+          <div class="phone" aria-hidden="true"><img src="assets/img/pause-blocage-aura.webp" alt="" width="589" height="1278" loading="lazy"></div>
+          <div class="phone" aria-hidden="true"><img src="assets/img/aura-personnaliser-fr.webp" alt="" width="589" height="1278" loading="lazy"></div>
+          <div class="phone" aria-hidden="true"><img src="assets/img/aura-parametres-fr.webp" alt="" width="589" height="1278" loading="lazy"></div>
+          <div class="phone" aria-hidden="true"><img src="assets/img/aura-apparence-fr.webp" alt="" width="589" height="1278" loading="lazy"></div>
         </div>
-
-        <div class="styles-panel" id="panel-tech" role="tabpanel" aria-labelledby="tab-tech">
-          <figure><div class="phone"><img src="assets/img/regles-fr-sombre.webp" alt="Règles en style Tech sombre : compteurs, frise de 24 h et quotas en segments" width="589" height="1278" loading="lazy"></div><figcaption class="label">Règles</figcaption></figure>
-          <figure><div class="phone"><img src="assets/img/minuteurs-fr-sombre.webp" alt="Page Minuteurs avec les modes Classique, Fixe et Progressif" width="589" height="1278" loading="lazy"></div><figcaption class="label">Minuteurs</figcaption></figure>
-          <figure><div class="phone"><img src="assets/img/pause-blocage-tech-clair.webp" alt="Page de blocage en style Tech clair" width="589" height="1278" loading="lazy"></div><figcaption class="label">Blocage · clair</figcaption></figure>
-        </div>
-        <div class="styles-panel" id="panel-aura" role="tabpanel" aria-labelledby="tab-aura" hidden>
-          <figure><div class="phone"><img src="assets/img/aura-accueil-fr.webp" alt="Accueil en style Aura : fond cuivré flou et cartes en verre" width="589" height="1278" loading="lazy"></div><figcaption class="label">Accueil</figcaption></figure>
-          <figure><div class="phone"><img src="assets/img/aura-regles-fr.webp" alt="Règles en style Aura sur fond gris atmosphérique" width="589" height="1278" loading="lazy"></div><figcaption class="label">Règles</figcaption></figure>
-          <figure><div class="phone"><img src="assets/img/pause-friction-aura.webp" alt="Page de pause en style Aura" width="589" height="1278" loading="lazy"></div><figcaption class="label">Pause</figcaption></figure>
-        </div>
-        <p style="margin-top:28px;color:var(--muted)">Thèmes clair et sombre, interface en français et en anglais, texte agrandi pris en charge.</p>
       </div>
     </section>
 
     <!-- Confidentialité -->
-    <section class="section privacy" id="confidentialite">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="label">05 · Confidentialité</p>
-          <h2>Tout se passe sur ton téléphone.</h2>
-          <p>Luma n’a ni compte ni serveur. Les calculs se font sur l’appareil et aucune donnée ne le quitte. Ton temps d’écran, ça ne regarde que toi.</p>
-        </div>
-        <div class="privacy-grid">
-          <div class="card reveal"><p class="zero">0</p><h3>compte</h3><p>Tu installes, tu règles ton objectif, c’est tout.</p></div>
-          <div class="card reveal"><p class="zero">0</p><h3>serveur</h3><p>Aucune donnée d’usage n’est envoyée nulle part.</p></div>
-          <div class="card reveal"><p class="zero">0</p><h3>pub</h3><p>Pas de publicité, pas de modèle caché.</p></div>
-          <div class="card reveal"><p class="zero">0</p><h3>traceur</h3><p>Pas d’analytics, pas de SDK tiers. Ce site non plus.</p></div>
-        </div>
-
-        <article class="card perm reveal">
-          <p class="label">Autorisations, en toute transparence</p>
-          <div class="table-scroll" style="margin-top:12px">
-            <table>
-              <thead><tr><th scope="col">Autorisation</th><th scope="col">À quoi elle sert</th><th scope="col">Obligatoire ?</th></tr></thead>
-              <tbody>
-                <tr><td>Accès aux données d’utilisation</td><td>Temps d’écran, statistiques, limites de temps et d’ouvertures</td><td>Pour ces fonctions</td></tr>
-                <tr><td>Service d’accessibilité «&nbsp;Protection Luma&nbsp;»</td><td>Appliquer les règles et les sessions Focus. Il détecte seulement l’app au premier plan, jamais le contenu de l’écran.</td><td>Pour bloquer</td></tr>
-                <tr><td>Notifications</td><td>Rappels et règles réglées sur Notification</td><td>Non</td></tr>
-                <tr><td>Service «&nbsp;Luma · Reels Instagram&nbsp;»</td><td>Option Reels, désactivée par défaut, avec un consentement séparé</td><td>Non</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p style="margin-top:18px;font-size:15px">Luma n’active aucun accès toute seule, et chaque accès se retire à tout moment. <a href="confidentialite.html" class="accent">Lire la politique de confidentialité →</a></p>
-        </article>
+    <section class="section privacy" id="confidentialite" data-mood="teal">
+      <div class="wrap reveal">
+        <p class="label">Confidentialité</p>
+        <h2>Rien ne quitte <em>ton téléphone</em>.</h2>
+        <p class="lead">Les calculs se font sur l’appareil. Luma ne lit pas le contenu de ton écran&nbsp;: elle sait seulement quelle app est ouverte.</p>
+        <ul class="nothing">
+          <li class="glass"><b>0</b>compte</li>
+          <li class="glass"><b>0</b>serveur</li>
+          <li class="glass"><b>0</b>pub</li>
+          <li class="glass"><b>0</b>traceur</li>
+        </ul>
+        <a class="link" href="confidentialite.html">Lire la politique de confidentialité</a>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section" id="faq" style="padding-top:40px">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="label">06 · Questions</p>
-          <h2>Bon à savoir.</h2>
+    <section class="section" id="faq" data-mood="teal" style="padding-top:40px">
+      <div class="wrap faq-wrap">
+        <div class="reveal">
+          <p class="label">Questions</p>
+          <h2 style="margin-top:20px">Bon à savoir.</h2>
         </div>
-        <div class="faq">
+        <div class="faq reveal">
           <details>
             <summary>Quand Luma sera-t-elle disponible&nbsp;?</summary>
-            <p>Luma est en version 1.3.1 et se prépare pour Google Play&nbsp;: signature, politique de confidentialité publique et déclarations d’accessibilité. Les essais de la protection sur plusieurs téléphones sont en cours.</p>
+            <p>Luma se prépare pour Google Play. Les derniers essais de la protection sur plusieurs téléphones sont en cours.</p>
           </details>
           <details>
-            <summary>Sur quels téléphones Luma fonctionne-t-elle&nbsp;?</summary>
-            <p>Sur tous les téléphones Android à partir d’Android 7.0, jusqu’à Android 17. L’app pèse environ 2,4 Mo.</p>
+            <summary>Sur quels téléphones&nbsp;?</summary>
+            <p>Sur Android 7.0 et plus récent, jusqu’à Android 17. L’app pèse environ 2,4 Mo.</p>
           </details>
           <details>
-            <summary>Pourquoi Luma demande-t-elle le service d’accessibilité&nbsp;?</summary>
-            <p>C’est le seul moyen, sur Android, de savoir quelle app passe au premier plan pour appliquer une règle au bon moment. Luma ne lit pas le contenu de l’écran&nbsp;: elle ne détecte que l’application ouverte.</p>
+            <summary>Pourquoi le service d’accessibilité&nbsp;?</summary>
+            <p>C’est le seul moyen, sur Android, de savoir quelle app passe au premier plan pour appliquer une règle au bon moment. Luma ne lit ni le texte ni le contenu de l’écran.</p>
           </details>
           <details>
-            <summary>Je peux contourner une règle si j’en ai vraiment besoin&nbsp;?</summary>
-            <p>Oui. Tu peux ajouter une exception temporaire sur une app bloquée, trois fois par jour au maximum, et modifier, désactiver ou supprimer une règle à tout moment. Les minuteurs règlent l’attente avant ces actions, pour que céder demande un petit effort.</p>
-          </details>
-          <details>
-            <summary>Mes réglages sont-ils sauvegardés&nbsp;?</summary>
-            <p>Tu peux exporter et importer tes règles et tes profils Focus dans un fichier JSON, qui reste chez toi. Il n’y a pas de synchronisation en ligne, puisqu’il n’y a pas de serveur.</p>
-          </details>
-          <details>
-            <summary>Luma est-elle gratuite&nbsp;?</summary>
-            <p>Luma ne contient ni publicité ni traceur. Les détails de distribution seront précisés à la sortie sur Google Play.</p>
+            <summary>Et si j’ai vraiment besoin d’une app bloquée&nbsp;?</summary>
+            <p>Tu peux ajouter une exception temporaire, trois fois par jour, ou modifier ta règle à tout moment. Les minuteurs ajoutent juste un petit délai pour que céder reste un choix.</p>
           </details>
         </div>
       </div>
     </section>
 
     <!-- Appel final -->
-    <section class="wrap" id="telecharger">
-      <div class="cta reveal">
-        <img src="assets/img/luma-logo.svg" alt="" width="76" height="76">
+    <section class="section cta" id="telecharger" data-mood="copper">
+      <div class="wrap reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="4.5" fill="#fff6ef"/><path d="M24 10 A14 14 0 1 1 10 24" fill="none" stroke="#fff6ef" stroke-width="2.4" stroke-linecap="round"/></svg>
         <p class="label">Bientôt sur Google Play</p>
-        <h2>Le temps qu’il te reste, <br>c’est toi qui le décides.</h2>
-        <p>Luma arrive bientôt sur Google Play. Suis le projet pour être prévenu de la sortie.</p>
-        <div class="hero-ctas" style="justify-content:center;margin-top:0">
+        <h2>Reprends la main sur ton <em>temps d’écran</em>.</h2>
+        <p class="lead">Suis le projet pour être prévenu de la sortie.</p>
+        <div class="hero-ctas">
           <a class="btn btn-primary" href="https://github.com/mononufu" rel="noopener">Suivre le projet sur GitHub</a>
-          <a class="btn btn-ghost" href="#top">Revenir en haut</a>
         </div>
       </div>
     </section>
@@ -364,12 +202,11 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <a class="brand" href="#top"><img src="assets/img/luma-logo.svg" alt="" width="30" height="30">Luma</a>
+        <a class="brand" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="4.5" fill="currentColor"/><path d="M24 10 A14 14 0 1 1 10 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg>Luma</a>
         <small>Conçu et développé à Montréal par <a href="https://github.com/mononufu">@mononufu</a>.</small>
       </div>
       <ul class="footer-links">
-        <li><a href="#fonctionnalites">Fonctionnalités</a></li>
-        <li><a href="#regles">Règles</a></li>
+        <li><a href="#interventions">L’app</a></li>
         <li><a href="confidentialite.html">Politique de confidentialité</a></li>
         <li><a href="https://github.com/mononufu">GitHub</a></li>
       </ul>

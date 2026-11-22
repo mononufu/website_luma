@@ -6,13 +6,13 @@ Site vitrine de [Luma](https://github.com/mononufu/luma), l’application Androi
 
 | Fichier | Rôle |
 | --- | --- |
-| `index.html` | Page d’accueil : héros, fonctionnalités, règles, page de pause, styles Tech et Aura, confidentialité, FAQ |
+| `index.html` | Page d’accueil : héros, trois façons d’intervenir, règles et Focus, galerie, confidentialité, FAQ |
 | `confidentialite.html` | Politique de confidentialité publique (à donner à Google Play) |
 | `404.html` | Page introuvable |
-| `assets/css/style.css` | Styles, palette reprise de l’app (violet `#6A4DFF`, vert volt `#C8F542`, fond `#0A0B0D`) |
-| `assets/js/main.js` | Apparition au défilement et onglets Tech / Aura |
+| `assets/css/style.css` | Styles dans l’esprit du style Aura de l’app : fond flou et granuleux dont la lumière change selon la partie (cuivre, gris, violet, bleu-vert), verre dépoli, titres en Instrument Serif |
+| `assets/js/main.js` | Apparition au défilement et changement d’ambiance du fond |
 | `assets/img/` | Logo, captures de l’app en WebP, image de partage `og-image.jpg` |
-| `assets/fonts/inter.ttf` | Police Inter (licence OFL), la même que dans l’app |
+| `assets/fonts/` | Inter et Instrument Serif (licence OFL), les polices de l’app |
 
 Le site est en HTML et CSS purs : pas de dépendance, pas d’étape de compilation, et aucune requête vers un service tiers (ni police Google, ni analytics, ni cookie).
 

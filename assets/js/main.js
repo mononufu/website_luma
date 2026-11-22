@@ -1,8 +1,9 @@
 // Luma — petites interactions du site. Aucun traceur, aucune requête externe.
 (function () {
   "use strict";
+  var root = document.documentElement;
 
-  // Bordure de l'en-tête une fois la page défilée.
+  // Barre de navigation plus marquée une fois la page défilée.
   var header = document.querySelector(".site-header");
   if (header) {
     var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 8); };
@@ -10,37 +11,26 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  // Apparition des blocs au défilement.
-  var items = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add("in"); });
+  if (!("IntersectionObserver" in window)) {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+    return;
   }
 
-  // Onglets Tech / Aura (clavier : flèches gauche et droite).
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.styles-switch [role="tab"]'));
-  function select(tab) {
-    tabs.forEach(function (t) {
-      var on = t === tab;
-      t.setAttribute("aria-selected", on ? "true" : "false");
-      t.tabIndex = on ? 0 : -1;
-      var panel = document.getElementById(t.getAttribute("aria-controls"));
-      if (panel) panel.hidden = !on;
+  // Apparition des blocs au défilement.
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
     });
-  }
-  tabs.forEach(function (tab, i) {
-    tab.addEventListener("click", function () { select(tab); });
-    tab.addEventListener("keydown", function (e) {
-      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
-      var next = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
-      select(next);
-      next.focus();
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+  document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+
+  // Ambiance du fond : chaque partie a sa lumière, comme dans le style Aura de l'app.
+  var moods = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) root.setAttribute("data-mood", e.target.getAttribute("data-mood"));
     });
+  }, { rootMargin: "-45% 0px -45% 0px" });
+  document.querySelectorAll("[data-mood]").forEach(function (el) {
+    if (el !== root) moods.observe(el);
   });
 })();
